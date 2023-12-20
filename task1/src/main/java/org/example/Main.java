@@ -5,22 +5,17 @@ public class Main {
         int n = Integer.parseInt(args[0]);
         int m = Integer.parseInt(args[1]);
 
-        int[] circularArr = new int[n];
-        for (int i = 0; i < n; i++) {
-            circularArr[i] = 1 + i;
-        }
-
         StringBuilder sb = new StringBuilder();
         int[] interval = new int[m];
-        int j = 0;
-        while (interval[m - 1] != circularArr[0]) {
+        int j = 1;
+        while (interval[m - 1] != 1) {
             for (int i = 0; i < m; i++) {
-                interval[i] = circularArr[j++];
-                if (j == n) {
-                    j = 0;
+                interval[i] = j++;
+                if (j > n) {
+                    j = 1;
                 }
             }
-            j = j > 0 ? j - 1 : n - 1;
+            j = j > 1 ? j - 1 : n;
             sb.append(interval[0]);
         }
 
