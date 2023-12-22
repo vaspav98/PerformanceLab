@@ -1,14 +1,18 @@
+plugins {
+    java
+}
+
 subprojects {
-    apply(plugin = "java")
+
+    apply {
+        plugin("java")
+    }
 
     group = "org.example"
     version = "1.0-SNAPSHOT"
 
     repositories {
         mavenCentral()
-    }
-
-    dependencies {
     }
 
     tasks.withType<Jar> {
