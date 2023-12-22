@@ -2,6 +2,7 @@
 build/
 task1/build/
 task2/build/
+task4/build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
