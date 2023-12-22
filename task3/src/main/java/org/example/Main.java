@@ -39,7 +39,7 @@ public class Main {
         DefaultPrettyPrinter prettyPrinter = new DefaultPrettyPrinter();
         prettyPrinter.indentArraysWith(DefaultIndenter.SYSTEM_LINEFEED_INSTANCE);
         ObjectWriter writer = om.writer(prettyPrinter);
-        writer.writeValue(getPath("src/main/resources/report.json").toFile(), result);
+        writer.writeValue(getPath("./report.json").toFile(), result);
 
     }
 
